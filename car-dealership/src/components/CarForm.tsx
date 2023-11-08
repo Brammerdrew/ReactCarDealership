@@ -1,18 +1,19 @@
-
+import { useSubmit } from "react-router-dom"
 import Button from "./Button"
 import Input from "./Input"
 
 import {useForm} from "react-hook-form"
-import { server_calls } from '../api/server';
-import { useDispatch, useStore } from "react-redux/es/exports";
+import { server_calls } from '../api/server'
+import { useDispatch, useStore } from "react-redux/es/exports"
 import { setColor, setMake, setMileage,  setModel , setPrice, setYear } from "../redux/slices/RootSlice";
 
 
-interface ContactFormProps {
-    id?: string;
+interface CarFormProps {
+    id?: string[];
+    onClose: () => void;
 }
 
-const ContactForm = ( props:ContactFormProps) => {
+const CarForm = ( props:CarFormProps) => {
     const { register, handleSubmit } = useForm({})
     const dispatch = useDispatch()
     const store = useStore()
@@ -73,4 +74,4 @@ const ContactForm = ( props:ContactFormProps) => {
     )
   }
   
-  export default ContactForm
+  export default CarForm

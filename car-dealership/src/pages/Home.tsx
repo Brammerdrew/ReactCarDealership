@@ -1,4 +1,4 @@
-import Background from '../assets/images/background.jpg'
+import Background from '../assets/images/Background.jpg'
 
 const Home = () => {
   return (
