@@ -1,4 +1,4 @@
-import { useSubmit } from "react-router-dom"
+
 import Button from "./Button"
 import Input from "./Input"
 
@@ -41,11 +41,11 @@ const CarForm = ( props:CarFormProps) => {
         <form onSubmit={handleSubmit(onSubmit)}>
           <div>
             <label htmlFor="make">Make</label>
-            <Input {...register('Make')} name='make' placeholder="make" />
+            <Input {...register('make')} name='make' placeholder="make" />
           </div>
           <div>
             <label htmlFor="model">Model</label>
-            <Input {...register('Model')} name='model' placeholder="model" />
+            <Input {...register('model')} name='model' placeholder="model" />
           </div>
           <div>
             <label htmlFor="email">Year</label>

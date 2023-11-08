@@ -1,8 +1,8 @@
-const token = 'c595c89d2997cd95852ed7df2eeb70327a97d99488f7b330'
+const token = 'f741964c8aa044da611c69766b6b606e64e9047bcbffca64'
 
 export const server_calls = {
     get: async () => { 
-        const response = await fetch(`https://car-dealership-1jar.onrender.com/api/cars`,
+        const response = await fetch(`https://car-dealership-1jar.onrender.com/api/inventory`,
         {
             method: 'GET',
             headers: {
@@ -21,7 +21,7 @@ export const server_calls = {
     },
 
     create: async (data: any = {}) => {
-        const response = await fetch(`https://car-dealership-1jar.onrender.com/api/cars`,
+        const response = await fetch(`https://car-dealership-1jar.onrender.com/api/inventory`,
         {
             method: 'POST',
             headers: {
@@ -41,7 +41,7 @@ export const server_calls = {
     },
 
     update: async (id: string, data:any = {}) => {
-        const response = await fetch(`https://car-dealership-1jar.onrender.com/api/cars/${id}`,
+        const response = await fetch(`https://car-dealership-1jar.onrender.com/api/inventory/${id}`,
         {
             method: 'PUT',
             headers: {
@@ -61,7 +61,7 @@ export const server_calls = {
     },
 
     delete: async (id: string) => {
-        const response = await fetch(`https://car-dealership-1jar.onrender.com/api/cars${id}`,
+        const response = await fetch(`https://car-dealership-1jar.onrender.com/api/inventory${id}`,
         {
             method: 'DELETE',
             headers: {

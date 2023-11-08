@@ -5,6 +5,14 @@ import { server_calls } from '../api/server';
 import { DataGrid, GridColDef } from '@mui/x-data-grid';
 import { useGetData } from '../custom-hooks/FetchData';
 
+const columns: GridColDef[] = [
+    { field: 'make', headerName: "Make", width: 90},
+    { field: 'model', headerName: "Model", flex: 1},
+    { field: 'year', headerName: "Year", flex: 1},
+    { field: 'mileage', headerName: "Mileage", flex: 1},
+    { field: 'color', headerName: "Color", flex: 1},
+    { field: 'price', headerName: "Price", flex: 1}
+]
 
 function DataTable() {
     let [ open, setOpen ] = useState(false);
